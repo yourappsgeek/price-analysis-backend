@@ -1,0 +1,30 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pricedb
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: root
+    initialization-mode: always
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+
+server:
+  port: 8282
+
+log4j:
+  logger:
+    org:
+      hibernate:
+        type: trace
